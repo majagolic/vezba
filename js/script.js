@@ -198,6 +198,25 @@ if(i===(niz.length)){
     console.log("Niz je simetrican.")
 }
 
+/*Zadatak 12
+Napisati program koji za svaki red matrice ispisuje koliko ima nula u tom redu.*/
+var brojac = 0;
+var m = [
+        [ 5, 3, 2 ],
+        [ 8, 0, 1 ],
+        [ 0, 0, 3 ]
+];
+for( var i = 0; i <m.length; i++){
+    for(var j = 0; j < m[i].length; j++){
+        if(m[i][j] == 0){
+            brojac++;
+        }
+    }
+    console.log("Broj 0 u redu " + i + " je " + brojac);
+    brojac = 0;
+
+}
+
 /*Zadatak 13
 Napisati program koji pronalazi najveci element u nizu decimalnih brojeva.
 */
@@ -227,6 +246,44 @@ for(i=1; i<niz.length; i++){
 }
 console.log("Najmanji broj u nizu je: ", najmanjiBroj);
 
+
+/*Zadatak 15
+Napisati program koji pronalazi najveci element na glavnoj dijagonali matrice.*/
+
+var M = [
+    [ 5, 3, 2 ],
+    [ 8, 0, 1 ],
+    [ 0, 0, 3 ]
+];
+
+var najveciUDijagonali = M[0][0];
+for(var i = 1; i < M.length; i++){
+    if(M[i][i] > najveciUDijagonali){
+        najveciUDijagonali = M[i][i];
+    }
+}
+console.log("Naveci je " + najveciUDijagonali);
+
+
+/*Zadatak 16
+Napisati program koji za proizvoljne n i m kreira i popunjava matricu čiji su elementi jednaki poziciji
+kolone.
+
+	1	2	3	4	...	m
+A = 1	2	3	4	... m
+	1	2	3	4	... m  */
+
+var n = 4;
+var m = 3;
+var D = [];
+
+for(var i = 0; i < n; i++){
+    D[i] = [];
+    for(var j = 0; j < m; j++){
+        D[i][j] = j;
+    }
+}
+console.log(D);
 
 
 
